@@ -6,3 +6,4 @@ Javascript DOM
 
 ES8 Syntax
 
+Parcel
