@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    border: 1px solid #000;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+.active {
+    background: rgb(43, 199, 69);
+    border-radius: 40px;
+    padding: 6px 22px;
+    font-size: 1em;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.load {
+    border: 2px solid rgb(43, 199, 69);
+    border-radius: 40px;
+    padding: 6px 22px;
+    font-size: 1em;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+
+.prev-img {
+    position: relative;
+    margin: .5rem;
+    overflow: hidden;
+}
+
+.prev-img img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.prev-img:hover .prev-remove {
+    opacity: 1;
+}
+
+.prev-img:hover .prev-info {
+    bottom: 0;
+}
+
+.prev-img.removing {
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+.prev-remove {
+    font-size: 1.3em;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .22s;
+}
+
+.prev-info {
+    position: relative;
+    font-size: .8rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 20px;
+    max-height: 50px;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    left: 0;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity .22s, bottom .22s;
+}
+
+.prev-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background:rgba(43, 199, 69, 0.9);
+    text-align: center;
+    transition: width .22s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
